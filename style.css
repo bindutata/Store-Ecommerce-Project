@@ -101,7 +101,7 @@ nav .user_access a span{
 };
 .home .products .latest_pdts{
     display :flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
@@ -109,14 +109,60 @@ nav .user_access a span{
     
 }
 .products .latest_pdts .product-card{
-    height:auto;
-    width:200px;
-    border:1px solid black;
+    height:380px;
+    width:230px;
+    border:1px solid gray;
+    border-radius: 3px;
     box-sizing: border-box;
     margin: 10px;
-
-    
 }
 .products .latest_pdts .product-card img{
-    height:100px;
+    height:180px;
+    width:100%;
+    margin-bottom:15px;
+}
+.latest_pdts .product-card .details{
+    padding:15px;
+    text-align: center;
+}
+.latest_pdts .product-card .details .pdt-name {
+    overflow:hidden;
+    font-weight:bold ;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.latest_pdts .product-card .details .pdt-name p{
+    white-space: nowrap;          /* Prevents text from wrapping */
+    overflow: hidden;             /* Hides the overflowing text */
+    text-overflow: ellipsis;      /* Adds the ellipsis (...) */
+    width: 100%;  
+}
+.latest_pdts .product-card .details .pdt-desc{
+    font-size: 12px;
+    color:gray;
+    display: -webkit-box;         /* Flexbox layout */
+    -webkit-line-clamp: 2;        /* Limits the block to 2 lines */
+    -webkit-box-orient: vertical; /* Required for webkit-line-clamp */
+    overflow: hidden;             /* Hides the overflowing text */
+    text-overflow: ellipsis;     /* Adds the ellipsis (...) */
+    
+}
+.latest_pdts .product-card .pdt-price{
+    font-size: 18px;
+    color:gray;
+    text-align: center;
+    padding:5px;
+}
+.latest_pdts .product-card .buttons{
+    text-align: center;
+    padding:15px;
+}
+.latest_pdts .product-card .details-btn,.addtocart-btn{    
+    background-color: black;
+    color:white;
+    font-size: 13px;
+    border:1px solid black;
+    border-radius: 3px;
+    width:fit-content;
+    padding:5px;
 }

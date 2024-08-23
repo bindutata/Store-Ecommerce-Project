@@ -10,13 +10,22 @@ const fakeproducts=fetch('https://fakestoreapi.com/products')
         const productsContainer=document.getElementById('latest_pdts');
         const products=response.map((product)=>{
             return (`<div class='product-card'>
-                        <img src='${product.image}' alt='image'/><hr>
-                        <p class='pdt-desc'>${product.description}</p><hr>
-                        <pre>${product.price}</pre><hr>
+                        <div class='details'>
+                            <img src='${product.image}' alt='image'/>
+                            <div class='pdt-name'>
+                                <p>${product.title}</p>
+                            </div>
+                            <div  class='pdt-desc'>   
+                                <p>${product.description}</p>
+                            </div>    
+                        </div><hr>
+                        <div class='pdt-price'>
+                            <pre>$${product.price}</pre>
+                        </div><hr>    
                         <div class='buttons'>
                             <button class='details-btn' id='details-btn'>Details</button>
-                            <button class='addtocart-btn' id='addtocart-btn'>AddToCart</button>
-                        </div>     
+                            <button class='addtocart-btn' id='addtocart-btn'>AddToCart</button> 
+                        </div>    
                     </div>
                     `);
         });
