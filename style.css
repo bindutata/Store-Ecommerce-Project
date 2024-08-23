@@ -99,3 +99,24 @@ nav .user_access a span{
     color:white;
     background-color: black;
 };
+.home .products .latest_pdts{
+    display :flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+    
+}
+.products .latest_pdts .product-card{
+    height:auto;
+    width:200px;
+    border:1px solid black;
+    box-sizing: border-box;
+    margin: 10px;
+
+    
+}
+.products .latest_pdts .product-card img{
+    height:100px;
+}
