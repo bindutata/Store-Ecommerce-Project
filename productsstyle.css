@@ -4,11 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    
     font-family: sans-serif;
 }
-
 nav{
+    background-color:#EEEEEE;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -51,35 +50,14 @@ nav .user_access a:hover{
 nav .user_access a span{
     margin-right: 5px;
 }
-.home .main{
-    padding:0px 30px;
-    height:500px;
-}
-.home .main img{
-    width:100%;
-    height:420px;
-    border:none;
-    border-radius: 10px;
-    position:relative;
-}
-.home .main .main_desc{
-    color: white;
-    position: absolute;
-    top:40%;
-    left:5%;
-}
-.home .main .main_desc .title{
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-.home .products{
+.productsPage .products{
     padding:0px 30px;
     margin:0px 50px;
 }
 .products .heading p{
     font-size: 35px;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 40px auto;
 }
 .products .categories{
     margin:50px auto;
@@ -100,7 +78,7 @@ nav .user_access a span{
     color:white;
     background-color: black;
 };
-.home .products .latest_pdts{
+.productsPage .products .latest_pdts{
     display :flex;
     justify-content:center;
     align-content: center;
