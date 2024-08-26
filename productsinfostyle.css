@@ -1,0 +1,52 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+nav{
+    background-color:#EEEEEE;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:80px;
+    padding: 20px;
+}
+nav .nav-list{
+    font-size: 15px;
+    display:flex;
+    gap:20px;
+}
+nav .nav-list a{
+    text-decoration: none ;
+    color:gray;
+}
+nav .nav-list a:visited{
+    color:black;
+}
+nav .user_access{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+nav .user_access a{
+    text-decoration: none;
+    font-size: 14px;
+    color:black;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 9px;
+    text-align: center;
+}
+nav .user_access a:hover{
+    color:white;
+    background-color: black;
+}
+
+nav .user_access a span{
+    margin-right: 5px;
+}
