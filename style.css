@@ -87,16 +87,17 @@ nav .user_access a span{
     justify-content: center;
     gap:20px;
 }
-.products .categories a{
+.products .categories button {
+    
     font-size: small;
-    text-decoration: none;
     width:fit-content;
     padding: 5px;
     border: 1px solid gray;
     border-radius: 3px;
     color:gray;
+    cursor: pointer;
 }
-.products .categories a:hover{
+.products .categories button:hover {
     color:white;
     background-color: black;
 };
@@ -154,11 +155,15 @@ nav .user_access a span{
     text-align: center;
     padding:5px;
 }
+.latest_pdts .product-card a{
+    text-decoration: none;
+}
 .latest_pdts .product-card .buttons{
     text-align: center;
-    padding:15px;
-}
-.latest_pdts .product-card .details-btn,.addtocart-btn{    
+    margin-top: 15px;
+}    
+
+.latest_pdts .product-card .details-btn,.product-card .addtocart-btn{    
     background-color: black;
     color:white;
     font-size: 13px;
@@ -166,4 +171,8 @@ nav .user_access a span{
     border-radius: 3px;
     width:fit-content;
     padding:5px;
+    cursor: pointer;
+}
+.latest_pdts .product-card .details-btn:hover,.addtocart-btn:hover{
+    background-color: gray;
 }

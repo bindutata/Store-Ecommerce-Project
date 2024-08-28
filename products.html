@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductsPage</title>
+    <link rel="stylesheet" href="productsstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <div class="productsPage">
+        <nav>
+            <div class="logo">
+                <h3>Ecommerce</h3> 
+            </div>
+            <div class="nav-list">
+                <a href="./HomePage.html">Home</a>
+                <a href="./products.html">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="user_access">
+                <div class="login">
+                    <a href="#"><span><i class="fa-solid fa-right-to-bracket"></i></span>Login</a>
+                </div>  
+                <div class="register">
+                    <a href="#"><span><i class="fa-solid fa-user-plus"></i></span>Register</a>
+                </div>
+                <div class="cart">
+                    <a href="./cartPage.html"><span><i class="fa-solid fa-cart-shopping"></i></span>Cart<span>(0)</span></a>
+                    
+                </div>    
+            </div>
+        </nav>
+        <div class="products">
+            <div class="heading">
+                <p>Latest Products</p>
+            </div>
+            <hr>
+            <div class="categories" id="categories">
+                <button class="category-btn" id="All" >All</button>
+                <button class="category-btn" id="Men's Clothing" >Men's Clothing</button>
+                <button class="category-btn" id="Women's Clothing" >Women's Clothing</button>
+                <button class="category-btn" id="Jewelery" >Jewelery</button>
+                <button class="category-btn" id="Electronics" >Electronics</button>
+            </div>
+            <div class="latest_pdts" id="latest_pdts" style="display:flex;flex-wrap: wrap;" >
+                
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

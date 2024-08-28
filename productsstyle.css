@@ -65,16 +65,16 @@ nav .user_access a span{
     justify-content: center;
     gap:20px;
 }
-.products .categories a{
+.products .categories button{
     font-size: small;
-    text-decoration: none;
+    cursor: pointer;
     width:fit-content;
     padding: 5px;
     border: 1px solid gray;
     border-radius: 3px;
     color:gray;
 }
-.products .categories a:hover{
+.products .categories button:hover{
     color:white;
     background-color: black;
 };
