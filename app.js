@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div><hr>    
                         <div class='buttons'>
                             <a href="./productsinfo.html?id=${product.id}" class='details-btn'>Details</a>
-                            <a href="#" class='addtocart-btn' >AddToCart</a>
+                            <a href="./cartPage.html?id=${product.id}" class='addtocart-btn' >AddToCart</a>
                         </div>    
                     </div>
                     `);
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div><hr>    
                             <div class='buttons'>
                                 <a href="./productsinfo.html?id=${product.id}" class='details-btn'>Details</a>
-                                <a href="#" class='addtocart-btn' >AddToCart</a>
+                                <a href="./cartPage.html" class='addtocart-btn' >AddToCart</a>
                             </div>    
                         </div>
                         `);
