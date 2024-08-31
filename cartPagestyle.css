@@ -64,10 +64,12 @@ nav .user_access a span{
     text-align: center;
     margin: 40px auto;
 }
+
 .cart-items {
     border:1px solid gray;
     border-collapse: collapse;
     width:50%;
+    margin-top: 30px;
 }
 .cart-items tr{
     display:flex;
@@ -92,18 +94,20 @@ nav .user_access a span{
 .order-summary {
     border: 1px solid gray;
     border-radius: 8px;
-    padding: 20px;
-    width: 300px;
-    background-color:#EEEEEE;
+    padding: 5px;
+    width: 260px;
+    height:auto;
+    margin-top: 30px;
 }
-.order-summary h3 {
-    margin-bottom: 20px;
+.order-summary .heading {
+    margin: 10px 0px;
     font-weight: 600;
+
 }
 .summary-details {
-    border-bottom: 1px solid gray;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
+    margin: 20px 0px;
 }
 .summary-item {
     display: flex;
@@ -114,7 +118,7 @@ nav .user_access a span{
     display: flex;
     justify-content: space-between;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 20px 0px;
 }
 .checkout-btn {
     display: block;
@@ -128,6 +132,7 @@ nav .user_access a span{
     font-weight: 600;
     cursor: pointer;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .checkout-btn:hover {

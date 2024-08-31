@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="rating">${product.rating.rate}</p>
                             <pre class="price">$ ${product.price}</pre>
                             <p class="desc">${product.description}</p>
-                            <a href="#"><button class="cart-btn">AddToCart</button></a>
-                            <a href="#"><button class="gotocart-btn">GoToCart</button></a>
+                            <a href="./cartPage.html"><button class="cart-btn">AddToCart</button></a>
+                            <a href="./cartPage.html"><button class="gotocart-btn">GoToCart</button></a>
                         </div>
                     `;
                     SimilarProducts(selectedcategory);
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>    
                     <div class='buttons'>
                         <a href="./productsinfo.html?id=${product.id}" class='details-btn'>Details</a>
-                        <a href="#" class='addtocart-btn' >AddToCart</a>
+                        <a href="./cartPage.html" class='addtocart-btn' >AddToCart</a>
                     </div>  
                 </div>`
             ).join('');

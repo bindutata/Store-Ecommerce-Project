@@ -143,3 +143,32 @@ nav .user_access a span{
     color:white;
     background-color: black;
 }
+.similar_pdts {
+    display: flex;
+    overflow: hidden; /* Hide the overflowing products */
+}
+
+.similar_pdts .simimage {
+    min-width: 200px; /* Adjust this width based on your product item */
+    margin-right: 20px; /* Space between items */
+    flex-shrink: 0; /* Prevents flex items from shrinking */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.similar_pdts {
+    display: flex;
+    overflow: hidden;
+    animation: slide 20s linear infinite;
+}
+
+.similar_pdts:hover {
+    animation-play-state: paused; /* Pause on hover */
+}

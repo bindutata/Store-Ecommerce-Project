@@ -4,10 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     const cartItemsContainer = document.getElementById('cart-items');
-    const totalItems = document.getElementById('total-items');
-    const productstotal = document.getElementById('product-total');
-    const totalamount = document.getElementById('total-amount');
-    const shippingCost = 30;
+    
+    const totalPriceElement = document.getElementById('totalprice');
 
     function addToCart(productid) {
         const item = productData.find((item) => item.id == productid);
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             localStorage.setItem('cart', JSON.stringify(cart));
             displayCartItems();
-            updateOrderSummary();
         }
     }
 
@@ -60,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     localStorage.setItem('cart', JSON.stringify(cart));
                     displayCartItems();
                     updateCartCount();
-                    updateOrderSummary();
                 }
             });
         });
@@ -68,64 +64,44 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.delete').forEach(button => {
             button.addEventListener('click', (e) => {
                 const id = e.target.getAttribute('item-id');
-                const itemIndex = cart.findIndex(cartItem => cartItem.id == id);
-                if (itemIndex > -1) {
-                    if (cart[itemIndex].quantity > 1) {
-                        cart[itemIndex].quantity -= 1;
+                const item = cart.find(cartItem => cartItem.id == id);
+                if (item) {
+                    if (item.quantity > 1) {
+                        item.quantity -= 1;
                     } else {
-                        cart.splice(itemIndex, 1); // Use splice to remove the item
+                        cart = cart.filter(cartItem => cartItem.id !== id);
                     }
                     localStorage.setItem('cart', JSON.stringify(cart));
                     displayCartItems();
-                    updateCartCount()
-                    updateOrderSummary();
-                    
+                    updateCartCount();
                 }
             });
         });
     }
 
-    function updateCartCount(){
-        var cartcount=document.getElementById('cart-count');
-        if(cart!=[]){
-            cartcount.innerText=cart.length;
-        }
-    }
-
-    function calculateTotalItems() {
-        totalItems.innerText=cart.length;
+    function updateCartCount() {
+       if(cart.length!=[]){
+            document.getElementById('cart-count').innerHTML=cart.length;
+       }
     }
 
     function calculateTotalPrice() {
         return cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
     }
 
-    function updateOrderSummary() {
-        const totalItems = calculateTotalItems();
-        const productTotal = calculateTotalPrice();
-        const totalAmount = cart.length > 0 ? (parseFloat(productTotal) + shippingCost).toFixed(2) : '0';
-
-        if (totalItems) {
-            totalItems.innerText = totalItems;
-        }
-        if (productstotal) {
-            productstotal.innerText = `$ ${productTotal}`;
-        }
-        if (totalamount) {
-            totalamount.innerText = `$ ${totalAmount}`;
+    function updateTotalPrice() {
+        if (totalPriceElement) {
+            totalPriceElement.innerText = `$ ${calculateTotalPrice()}`;
         }
     }
 
-    
+    // If a product ID is present in the URL, add it to the cart
     if (productid) {
-        const productInCart = cart.some(cartItem => cartItem.id == productid);
-        if (!productInCart) {
-            addToCart(productid);
-        }
+        addToCart(productid);
     }
-    
+
+    // Display items if they exist in local storage
     displayCartItems();
     updateCartCount();
-    updateOrderSummary();
+    updateTotalPrice();
 });
-
