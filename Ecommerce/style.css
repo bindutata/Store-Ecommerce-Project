@@ -1,0 +1,178 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:80px;
+    padding: 20px;
+}
+nav .nav-list{
+    font-size: 15px;
+    display:flex;
+    gap:20px;
+}
+nav .nav-list a{
+    text-decoration: none ;
+    color:gray;
+}
+nav .nav-list a:visited{
+    color:black;
+}
+nav .user_access{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+nav .user_access a{
+    text-decoration: none;
+    font-size: 14px;
+    color:black;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 9px;
+    text-align: center;
+}
+nav .user_access a:hover{
+    color:white;
+    background-color: black;
+}
+
+nav .user_access a span{
+    margin-right: 5px;
+}
+.home .main{
+    padding:0px 30px;
+    height:500px;
+}
+.home .main img{
+    width:100%;
+    height:420px;
+    border:none;
+    border-radius: 10px;
+    position:relative;
+}
+.home .main .main_desc{
+    color: white;
+    position: absolute;
+    top:40%;
+    left:5%;
+}
+.home .main .main_desc .title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.home .products{
+    padding:0px 30px;
+    margin:0px 50px;
+}
+.products .heading p{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.products .categories{
+    margin:50px auto;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.products .categories button {
+    
+    font-size: small;
+    width:fit-content;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    color:gray;
+    cursor: pointer;
+}
+.products .categories button:hover {
+    color:white;
+    background-color: black;
+};
+.home .products .latest_pdts{
+    display :flex;
+    justify-content:center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:50px;
+    
+}
+.products .latest_pdts .product-card{
+    height:380px;
+    width:250px;
+    border:1px solid gray;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.products .latest_pdts .product-card img{
+    height:180px;
+    width:100%;
+    margin-bottom:15px;
+}
+.latest_pdts .product-card .details{
+    padding:15px;
+    text-align: center;
+}
+.latest_pdts .product-card .details .pdt-name {
+    overflow:hidden;
+    font-weight:bold ;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.latest_pdts .product-card .details .pdt-name p{
+    white-space: nowrap;          /* Prevents text from wrapping */
+    overflow: hidden;             /* Hides the overflowing text */
+    text-overflow: ellipsis;      /* Adds the ellipsis (...) */
+    width: 100%;  
+}
+.latest_pdts .product-card .details .pdt-desc{
+    font-size: 12px;
+    color:gray;
+    display: -webkit-box;         /* Flexbox layout */
+    -webkit-line-clamp: 2;        /* Limits the block to 2 lines */
+    -webkit-box-orient: vertical; /* Required for webkit-line-clamp */
+    overflow: hidden;             /* Hides the overflowing text */
+    text-overflow: ellipsis;     /* Adds the ellipsis (...) */
+    
+}
+.latest_pdts .product-card .pdt-price{
+    font-size: 18px;
+    color:gray;
+    text-align: center;
+    padding:5px;
+}
+.latest_pdts .product-card a{
+    text-decoration: none;
+}
+.latest_pdts .product-card .buttons{
+    text-align: center;
+    margin-top: 15px;
+}    
+
+.latest_pdts .product-card .details-btn,.product-card .addtocart-btn{    
+    background-color: black;
+    color:white;
+    font-size: 13px;
+    border:1px solid black;
+    border-radius: 3px;
+    width:fit-content;
+    padding:5px;
+    cursor: pointer;
+}
+.latest_pdts .product-card .details-btn:hover,.addtocart-btn:hover{
+    background-color: gray;
+}

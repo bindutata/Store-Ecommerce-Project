@@ -1,0 +1,174 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+nav{
+    background-color:#EEEEEE;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:80px;
+    padding: 20px;
+}
+nav .nav-list{
+    font-size: 15px;
+    display:flex;
+    gap:20px;
+}
+nav .nav-list a{
+    text-decoration: none ;
+    color:gray;
+}
+nav .nav-list a:visited{
+    color:black;
+}
+nav .user_access{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+nav .user_access a{
+    text-decoration: none;
+    font-size: 14px;
+    color:black;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 9px;
+    text-align: center;
+}
+nav .user_access a:hover{
+    color:white;
+    background-color: black;
+}
+
+nav .user_access a span{
+    margin-right: 5px;
+}
+.selected-pdt {
+    display:flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+    gap:100px;
+    padding:100px;
+}
+.selected-pdt img{
+    height:400px;
+    width:350px;
+}
+.about-pdt{
+    width:50%;
+}
+.about-pdt .category{
+    color:#3C3D37;
+    font-size: 20px;
+    font-family: bold;
+    margin:10px 0px;
+}
+.about-pdt .title{
+    font-size: 30px;
+    margin:10px 0 5px 0;
+}
+.about-pdt .rating{
+    color:gray;
+    margin-bottom:10px ;
+}
+.about-pdt .price{
+    font-size: 30px;
+    margin:20px 0px;
+}
+.about-pdt .desc{
+    font-size: 13px;
+    color:gray;
+    margin-bottom:20px ;
+}
+.about-pdt a {
+    text-decoration: none;
+}
+.about-pdt a button{    
+    width:fit-content;
+    padding:8px;
+    border:1px solid black;
+    border-radius: 3px;
+    font-size: 12px;
+    color:black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.about-pdt a button:hover{
+    color:white;
+    background-color: black;
+}
+.productsinfo .heading{
+   padding:50px;
+}
+.productsinfo .similar_pdts {
+    display :flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:50px;
+}
+.productsinfo .similar_pdts .simimage{
+    height:auto;
+    width:180px;
+    border:1px solid gray;
+    border-radius: 2px;
+    padding:20px;
+    text-align: center;
+}
+.productsinfo .similar_pdts .simimage img{
+    height:120px;
+    width:100px;
+    margin-bottom:30px ;
+}
+.productsinfo .similar_pdts .simimage .name{
+    white-space: nowrap;          /* Prevents text from wrapping */
+    overflow: hidden;             /* Hides the overflowing text */
+    text-overflow: ellipsis; 
+    text-align: center;
+    margin-bottom:30px;
+}
+.similar_pdts .simimage .buttons a{
+    text-decoration: none;
+    font-size: 12px;
+    border:1px solid black;
+    border-radius: 3px;
+    width:fit-content;
+    padding:3px;
+    color:white;
+    background-color: black;
+}
+.similar_pdts {
+    display: flex;
+    overflow: hidden; /* Hide the overflowing products */
+}
+
+.similar_pdts .simimage {
+    min-width: 200px; /* Adjust this width based on your product item */
+    margin-right: 20px; /* Space between items */
+    flex-shrink: 0; /* Prevents flex items from shrinking */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.similar_pdts {
+    display: flex;
+    overflow: hidden;
+    animation: slide 20s linear infinite;
+}
+
+.similar_pdts:hover {
+    animation-play-state: paused; /* Pause on hover */
+}
